@@ -41,7 +41,18 @@
     <!-- LaTeX math rendering -->
     {{ if or .Params.math .Site.Params.math }}
     <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        MathJax.Hub.Config({ 
+        tex2jax: { 
+              inlineMath: [['$','$'], ['\\(','\\)']],
+              displayMath: [['$$','$$'], ['\[','\]']],
+              processEnvironments: true
+            },
+        TeX: {
+          equationNumbers: {
+              autoNumber: "AMS"
+            }
+        }
+        });
     </script>
     {{ if not .Site.Params.disable_sri }}
     {{ printf "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" .Site.Data.sri.js.mathJax | safeHTML }}

@@ -1,7 +1,7 @@
 +++
 # About/Biography widget.
 
-date = "2016-04-20T00:00:00"
+date = "2017-08-01"
 draft = false
 
 widget = "about"
@@ -13,30 +13,17 @@ weight = 1
 [interests]
   interests = [
     "Artificial Intelligence",
-    "Computational Linguistics",
-    "Information Retrieval"
+    "Measure Theory"
   ]
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in Artificial Intelligence"
-  institution = "Stanford University"
-  year = 2012
-
-[[education.courses]]
-  course = "MEng in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2009
-
-[[education.courses]]
-  course = "BSc in Artificial Intelligence"
-  institution = "Massachusetts Institute of Technology"
-  year = 2008
+  course = "MS and BS in Mathematics and Computing"
+  institution = "Indian Institute of Technology, Delhi"
+  year = 2013
  
 +++
 
 # Biography
 
-Lena Smith is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate. 
+Gaurav Mahajan is a PhD candidate in the Department of Computer Science and Engineering at the University of California, San Diego advised by [Prof. Tajana Simunic Rosing](http://cseweb.ucsd.edu/~trosing/). Before that he was a software developer at Microsoft, Redmond where he was part of [PowerApps](https://powerapps.microsoft.com), a platform which lets you build apps without any coding experience. He received his M.S. and B.S from the Mathematics Department at the Indian Institute of Technology, Delhi, where he was advised by [Dr. Subiman Kundu](http://maths.iitd.ac.in/people/faculty/subiman_kundu.php).

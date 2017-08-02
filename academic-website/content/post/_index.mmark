@@ -1,7 +1,7 @@
 +++
 title = "Posts"
-date = "2017-01-01T00:00:00Z"
-math = false
+date = "2017-08-01"
+math = true
 highlight = false
 
 # Optional featured image (relative to `static/img/` folder).

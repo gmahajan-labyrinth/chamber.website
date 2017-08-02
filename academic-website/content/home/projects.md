@@ -2,8 +2,8 @@
 # Projects widget.
 # This widget displays all projects from `content/project/`.
 
-date = "2016-04-20T00:00:00"
-draft = false
+date = "2017-08-01"
+draft = true
 
 title = "Projects"
 subtitle = ""
@@ -26,12 +26,12 @@ view = 1
   tag = "*"
   
 [[filter]]
-  name = "Deep Learning"
-  tag = ".deep-learning"
+  name = "University of California, San Diego"
+  tag = ".ucsd"
 
 [[filter]]
-  name = "Other"
-  tag = ".demo"
+  name = "Microsoft"
+  tag = ".microsoft"
 
 +++
 
