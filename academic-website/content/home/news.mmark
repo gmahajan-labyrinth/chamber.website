@@ -1,0 +1,15 @@
++++
+date = "2017-08-01"
+draft = false
+
+title = "News"
+subtitle = ""
+widget = "custom"
+
+# Order that this section will appear in.
+weight = 20
++++
+
+- [September, 2014] Joined Project Siena (now PowerApps) at [Microsoft](https://powerapps.microsoft.com/).
+- [September, 2016] Shipped PowerApps GA at [Microsoft](https://powerapps.microsoft.com/).
+- [September, 2017] Joined PhD program at [University of California](http://cseweb.ucsd.edu/).

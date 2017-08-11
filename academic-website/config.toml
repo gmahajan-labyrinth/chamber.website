@@ -138,6 +138,11 @@ defaultContentLanguageInSubdir = false
     icon_pack = "fa"
     link = "//github.com/gomahajan"
 
+  [[params.social]]
+    icon = "file-pdf-o"
+    icon_pack = "fa"
+    link = "/pdf/resume.pdf"
+
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
@@ -147,32 +152,32 @@ defaultContentLanguageInSubdir = false
 [[menu.main]]
   name = "Home"
   url = "#about"
-  weight = 1
+  weight = 10
 
 [[menu.main]]
   name = "Posts"
   url = "#posts"
-  weight = 2
+  weight = 40
 
 #[[menu.main]]
 #  name = "Publications"
 #  url = "#publications_selected"
-#  weight = 2
+#  weight = 30
 
 #[[menu.main]]
 #  name = "Projects"
 #  url = "#projects"
-#  weight = 4
+#  weight = 50
 
-#[[menu.main]]
-#  name = "Teaching"
-#  url = "#teaching"
-#  weight = 5
+[[menu.main]]
+  name = "News"
+  url = "#news"
+  weight = 20
 
 [[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 6
+  weight = 80
 
 # Taxonomies.
 [taxonomies]
