@@ -1,0 +1,4 @@
+[submodule "academic-website\\public"]
+	path = academic-website\\public
+	url = https://github.com/gomahajan/gomahajan.github.io.git
+	branch = master
