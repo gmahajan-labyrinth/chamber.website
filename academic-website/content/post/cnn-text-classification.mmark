@@ -1,0 +1,56 @@
++++
+date = "2017-08-20"
+draft = true
+tags = ["text-classification", "tensorflow", "convolution-neural-network"]
+title = "Human Activity Recognition using Convolution Neural Network"
+math = true
+disableSummary = true
++++
+In this post, we will discuss how to build a architecture for Human Activity Recognition using Convolution Neural Network. [Link to code](https://github.com/gomahajan/har-actitracker)
+
+<!--more--> 
+ # Python Libraries Used
+1) TensorFlow
+2) Pandas
+3) Numpy
+4) Scipy
+5) Matplotlib
+
+# Dataset
+We are going to build a architecture which recognizes human activities like walking, lying down, standing, sitting, jogging etc. based on accelerometer data. We will use the Actitracker dataset from [Wireless Sensor Data Mining Lab](http://www.cis.fordham.edu/wisdm/dataset.php). 
+
+Data for some activities in the dataset:
+
+![](/img/har-cnn-actitracker/walking.png)
+![](/img/har-cnn-actitracker/lying-down.png)
+
+# Architecture
+ Our architecture consists of multiple Depthwise Convolution Neural Networks (D-CONV), Max POOL and RELU layers, followed by fully connected neural network (FC) with a softmax classifier to get the class probabilities.
+
+ [D-CONV -> RELU] -> POOL -> [D-CONV -> RELU] -> FC
+
+ If you haven't heard of Depthwise Convolution Neural Networks, they are similar to normal Convolution Neural Networks except the filters are applied to each channel separately. So, a Convolution Neural Network which has input tensor of shape [batch, in_height, in_width, in_channels] and a filter tensor of shape [filter_height, filter_width, in_channels, out_channels] will output a tensor of shape [batch, out_height, out_width, out_channels]. A Depthwise Convolution Neural Network which has input tensor of shape [batch, in_height, in_width, in_channels] and a filter tensor of shape [filter_height, filter_width, in_channels, channel_multiplier] will output a tensor of shape [batch, out_height, out_width, in_channels*channel_multiplier] as it will separately apply channel_multiplier number of filters to each in_channel.
+
+ #Preprocessing data
+ ```python
+ dataset = util.read_data('WISDM_at_v2.0_raw.txt', 1)
+ dataset['x-axis'] = math.normalize(dataset['x-axis'])
+ dataset['y-axis'] = math.normalize(dataset['y-axis'])
+ dataset['z-axis'] = math.normalize(dataset['z-axis'])
+
+ unique_activities = pd.unique(dataset["activity"])
+ for activity in unique_activities:
+     subset = dataset[dataset["activity"] == activity][:180]
+ 
+ segments, labels = util.create_segments(dataset)
+ labels = np.asarray(pd.get_dummies(labels), dtype=np.int8)
+ reshaped_segments = segments.reshape(len(segments), 1, 90, 3)
+
+ train_test_split = np.random.rand(len(reshaped_segments)) < 0.50
+ train_x = reshaped_segments[train_test_split]
+ train_y = labels[train_test_split]
+ test_x = reshaped_segments[~train_test_split]
+ test_y = labels[~train_test_split]
+ ```
+
+ Inspired from a [post](https://github.com/aqibsaeed/Human-Activity-Recognition-using-CNN) by Aaqib Saeed

@@ -1,7 +1,7 @@
 +++
 date = "2017-08-01"
 draft = false
-tags = ["regression", "ai", "proof"]
+tags = ["regression", "proof"]
 title = "Finding Regression Function"
 math = true
 disableSummary = true
